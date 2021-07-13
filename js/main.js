@@ -38,7 +38,7 @@ document.getElementById('appointment-form').addEventListener('submit', function 
     
     const appointmentMessage = document.querySelector('.appointment-message');
     let formFields = document.getElementsByClassName('form-field');
-    let allFieldsFilledIn = false;
+    let allFieldsFilledIn = true;
 
     let appointment = {
         name: document.getElementById('appointment-name').value,
@@ -56,7 +56,7 @@ document.getElementById('appointment-form').addEventListener('submit', function 
             allFieldsFilledIn = false;
             formFields[i].classList.add('error');
         } else {
-            allFieldsFilledIn = true;
+            
             formFields[i].classList.remove('error');
         }
     }
